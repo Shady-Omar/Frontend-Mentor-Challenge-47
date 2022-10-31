@@ -1,0 +1,305 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+      scroll-behavior: smooth;
+}
+
+body {
+      font-family: 'Poppins', sans-serif;
+}
+
+.btn {
+      display: flex;
+      padding: 1rem 2.5rem;
+      background-color: hsl(180, 66%, 49%);
+      font-family: inherit;
+      color: #fff;
+      text-decoration: none;
+      transition: 0.4s;
+      place-content: center;
+      border-radius: 2rem;
+      margin: 2rem 0;
+      box-shadow: rgba(0, 0, 0, 0.4) 0px 6px 24px;
+      cursor: pointer;
+}
+
+.btn:hover, .btn:focus {
+      background-color: hsl(257, 27%, 26%);
+}
+
+#button {
+      width: 20%;
+}
+
+.log {
+      background-color: transparent;
+      box-shadow: none;
+      color: hsl(257, 7%, 63%);
+}
+
+.sign {
+      box-shadow: none;
+}
+
+.log:hover, .log:focus {
+      background-color: transparent;
+}
+
+#button .btn {
+      margin: 0;
+      padding: 0.5rem 1.5rem;
+}
+
+#shorten {
+      background-image: url(../images/bg-shorten-desktop.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+}
+
+#submit {
+      outline: none;
+      border: 1px solid hsl(180, 66%, 49%);
+      background-color: hsl(180, 66%, 49%);
+      border-radius: 0.5rem;
+      padding: 0.8rem 1.5rem;
+      margin-top: 0;
+      color: white;
+      font-family: inherit;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      cursor: pointer;
+      font-size: 18px;
+      transition: 0.4s;
+}
+
+#submit:hover, #submit:focus {
+      border: 1px solid hsl(260, 8%, 14%);
+      background-color: hsl(260, 8%, 14%);
+}
+
+#grid-one, #grid-two, #grid-three {
+      box-shadow: rgb(0 0 0 / 25%) 0px 8px 24px 2px;
+      border-radius: 0.5rem;
+}
+
+#grid::after {
+      content: "";
+      position: absolute;
+      height: 10px;
+      background-color: hsl(180, 66%, 49%);
+      width: 70rem;
+      z-index: -1;
+      top: calc(50% - 5px);
+}
+
+#boost {
+      background-image: url(../images/bg-boost-desktop.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+}
+
+.btn-boost:hover, .btn-boost:focus {
+      background-color: hsl(260, 8%, 14%);
+}
+
+#nav li {
+      position: relative;
+      color: hsl(228, 39%, 23%);
+      font-weight: 500;
+}
+
+#nav li::after {
+      content: "";
+      position: absolute;
+      border-bottom: 4px solid hsl(180, 66%, 49%);
+      width: 0%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-top: 0.5rem;
+      transition: 0.2s;
+}
+
+#nav li:hover::after {
+      width: 100%;
+}
+
+.overlay {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: linear-gradient(to bottom, transparent, hsl(0, 0%, 0%, 0.8));
+      z-index: 2;
+}
+
+li {
+      cursor: pointer;
+      transition: 0.2s;
+}
+
+#links ul li {
+      margin-bottom: 1rem;
+      color: hsl(0, 0%, 75%);
+}
+
+#links ul li:hover, #links ul li:focus {
+      color: hsl(180, 66%, 49%);
+}
+
+#social img {
+      transition: 0.4s;
+      cursor: pointer;
+}
+
+#social img:hover {
+      filter: invert(84%) sepia(12%) saturate(2937%) hue-rotate(132deg) brightness(600%) contrast(84%);
+}
+
+.result {
+      margin-top: 1rem;
+}
+
+.result .item {
+      box-shadow: rgb(0 0 0 / 25%) 0px 8px 24px 2px;
+      border-radius: 1rem;
+      margin: 0.5rem 0;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      background-color: white;
+      color: black;
+      padding: 1rem 2rem;
+}
+
+.result .item .btn {
+      margin: 0;
+      padding: 0.8rem 1.5rem;
+      box-shadow: none;
+}
+
+@media (max-width: 1024px) {
+      html,body{
+            overflow-x: hidden;
+      }
+
+      ul {
+            margin: 1rem 0;
+      }
+      
+      li {
+            margin-bottom: 1.5rem;
+      }
+      
+      #nav li:hover, #nav li:focus {
+            color: hsl(180, 66%, 49%);
+      }
+
+      .mob-nav {
+            box-shadow: hsl(0deg 0% 0% / 20%) 0px 12px 24px;
+      }
+
+      #nav li{
+            width: 50%;
+            font-weight: 700;
+            font-size: 18px;
+            color: white;
+            transition: 0.2s;
+            cursor: pointer;
+      }
+      
+      #nav li:last-of-type {
+            margin-bottom: 0;
+      }
+
+      #nav li::after {
+            content: none;
+      }
+
+      #shorten {
+            background-image: url(../images/bg-shorten-mobile.svg);
+            background-repeat: no-repeat;
+            background-position: right top;
+      }      
+
+      #submit {
+            outline: none;
+            border: none;
+            background-color: hsl(180, 66%, 49%);
+            border-radius: 0.5rem;
+            padding: 0.8rem 1.5rem;
+            margin-top: 2rem;
+            color: white;
+            font-family: inherit;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+            cursor: pointer;
+            font-size: 18px;
+            transition: 0.4s;
+      }
+
+      #submit:hover, #submit:focus {
+            border: none;
+            background-color: hsl(260, 8%, 14%);
+      }
+
+      hr {
+            width: 85%;
+            color: white;
+      }
+      
+      #button {
+            width: 85%;
+            margin-bottom: 2rem;
+            margin-top: 1rem;
+      }
+      
+      #button .btn {
+            margin: 0;
+            padding: 0.7rem 1.5rem;
+      }
+
+      .log {
+            color: white;
+            margin-bottom: 1rem !important;
+            font-weight: 700;
+      }
+
+      .log:hover {
+            color: hsl(180, 66%, 49%);
+      }
+
+      .sign:hover, .sign:focus {
+            background-color: hsl(260, 8%, 14%);
+      }
+
+      #grid::after {
+            content: "";
+            position: absolute;
+            height: 70rem;
+            background-color: hsl(180, 66%, 49%);
+            width: 10px;
+            z-index: -1;
+            left: calc(50% - 5px);
+            top: 0;
+      }
+
+      #boost {
+            background-image: url(../images/bg-boost-mobile.svg);
+            background-repeat: no-repeat;
+            background-position: right top;
+            background-size: cover;
+      }
+
+      #links ul {
+            text-align: left;
+      }
+}
